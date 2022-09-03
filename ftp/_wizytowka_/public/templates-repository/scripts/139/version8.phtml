@@ -1,0 +1,69 @@
+<div class="blueContent top">
+	<div class="row">
+		<div class="large-12 columns bg">
+			<div class="panel">
+				<?php include 'partials/mainheader.phtml'; ?>
+			</div><!-- panel -->
+		</div><!-- large-12 columns bg -->	
+	</div><!-- row -->		
+	
+	
+	<div class="panel mobileMenu">
+        <div id="sticky_navigation">
+            <div class="row">
+            <?php include 'partials/mainheader.phtml'; ?>
+                <div class="menuFixRight">
+                    <a href="#about" class="menuAbout"><img src="<?php echo $this->resourceUrl('139', '/images/ico-about.png'); ?>"><?php echo $this->basicInfoSectionTitle; ?></a>
+					<a href="#offer" class="menuAbout"><img src="<?php echo $this->resourceUrl('139', '/images/ico-oferta.png'); ?>"><?php echo $this->offerSectionTitle; ?></a>
+                    <a href="#korespondencja" class="menuDaneFirmy"><img src="<?php echo $this->resourceUrl('139', '/images/ico-dane-firmowe.png'); ?>"><?php echo $this->detailsDataSectionTitle; ?></a>
+                    <a href="#lokalizacja" class="menuLokalizacja"><img src="<?php echo $this->resourceUrl('139', '/images/ico-lokalizacja.png'); ?>"><?php echo $this->mapSectionTitle; ?></a>
+                </div><!-- menuFixRight -->
+            </div><!-- row -->
+        </div>
+    </div><!-- mobileMenu -->
+</div><!-- blueContent -->	
+			
+			
+	<div class="row">
+        <div class="large-12 columns">
+            <div class="panel">
+               <?php include 'partials/basicinfo.phtml'; ?>
+            </div><!-- panel -->
+        </div>
+    </div>
+	
+
+
+<div class="greyContent">
+	<div class="row">
+        <div class="large-12 columns">
+            <div class="panel">
+               <?php include 'partials/offerdata.phtml'; ?>
+            </div><!-- panel -->
+        </div>
+    </div>
+</div><!-- greyContent -->	
+	
+			
+	<div class="blueContent bottom">
+        <div class="row">
+            <div class="large-12 columns">
+			<a href="#korespondencja" class="strzalka_biel_trans allLink"></a>
+                <div id="korespondencja">
+					<?php include 'partials/detailsdata.phtml'; ?>
+					<?php include 'partials/correspondencedata.phtml'; ?>
+				</div><!-- #korespondencja -->
+            </div> <!-- large-12 columns -->
+        </div><!-- row -->
+    </div><!-- blueContent -->
+
+	<div class="orangeContent">
+		<?php include 'partials/map.phtml'; ?>	
+    </div><!-- lokalizacja -->	
+		
+
+
+
+
+
+	

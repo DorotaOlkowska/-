@@ -1,0 +1,71 @@
+<div id="wrap">
+    <img class="bgfade bg1" src="<?php echo $this->resourceUrl('297', '/images/bg_onas.jpg'); ?>">
+	<img class="bgfade bg6" src="<?php echo $this->resourceUrl('297', '/images/bg_onas.jpg'); ?>">
+    <img class="bgfade bg2" src="<?php echo $this->resourceUrl('297', '/images/bg_dane.jpg'); ?>">
+    <img class="bgfade bg3" src="<?php echo $this->resourceUrl('297', '/images/bg_kores.jpg'); ?>">
+	<img class="bgfade bg4" src="<?php echo $this->resourceUrl('297', '/images/bg_lokal.jpg'); ?>">
+    <img class="bgfade bg5" src="<?php echo $this->resourceUrl('297', '/images/bg_form.jpg'); ?>">
+</div>
+
+<div class="row">
+    <div class="large-12 medium-12 columns content">
+	
+		<div class="overflow">
+			<nav>
+				<ul class="offerFull">
+					<li class="about">
+						<a href="<?php echo $this->baseUrl(); ?>#" class="menuAbout"><?php echo $this->basicInfoSectionTitle; ?></a>
+					</li>			
+
+					<li class="offer">
+						<a href="<?php echo $this->baseUrl(); ?>#"><?php echo $this->offerSectionTitle; ?></a>
+					</li>										
+							
+					<li class="daneFirmowe">
+						<a href="<?php echo $this->baseUrl(); ?>#"><?php echo $this->detailsDataSectionTitle; ?></a>
+					</li>
+							
+					<li class="daneKorespondencyjne">
+						<a href="<?php echo $this->baseUrl(); ?>#"><?php echo $this->correspondenceDataSectionTitle; ?></a>
+					</li>
+							
+					<li class="lokalizacja mapInvoker">
+						<a href="<?php echo $this->baseUrl(); ?>#"><?php echo $this->mapSectionTitle; ?></a>
+					</li>
+				</ul>
+			</nav>
+
+			<?php include 'partials/mainheader.phtml'; ?>
+
+		</div><!-- overflow -->
+
+		<div id="about">
+			<?php include 'partials/basicinfo.phtml'; ?>
+		</div><!-- about -->
+		
+		<div id="offer">
+			<?php include 'partials/offerdata.phtml'; ?>
+		</div><!-- about -->
+		
+				
+        <div id="daneFirmowe">
+			<?php include 'partials/detailsdata.phtml'; ?>
+		</div><!-- daneFirmowe -->
+		
+		<div id="daneKorespondencyjne"> 
+			<?php include 'partials/correspondencedata.phtml'; ?>
+		</div><!-- daneKorespondencyjne -->
+		
+		<div id="lokalizacja">
+			<?php include 'partials/map.phtml'; ?>
+		</div><!-- lokalizacja -->
+
+	
+	
+    </div><!-- large 12 -->
+</div><!-- row -->
+
+	
+	
+	
+	

@@ -1,0 +1,48 @@
+<?php if($this->correspondenceDataEnable) : ?>
+    <p class="links1">
+        <a href="#adres-do-korespondencji-szczegoly" title="" class="block4_Korespond fancybox"><?php echo $this->correspondenceDataSectionTitle; ?></a>
+    </p>
+
+    <!-- warstwa adres do korespondencji -->
+    <div style="display: none;">
+        <div id="adres-do-korespondencji-szczegoly" class="row pop">
+            <div class="large-12 columns">
+                <div class="panel">
+                    <div class="row">
+                        <h2><?php echo $this->correspondenceDataSectionTitle; ?></h2>
+
+                        <div class="large-12 medium-12 columns">
+                            <p class="addresImg">
+                                <span class="name1"><?php echo $this->businessCardTitle; ?></span>
+                            </p>
+                        </div><!-- large-6 medium-6 columns -->
+
+
+                        <?php if($this->correspondenceDataAddressEnable) : ?>
+                            <div class="large-12 medium-12 columns">
+                                <p>
+                                    <span class="name2"><?php echo $this->correspondenceDataAddressStreet; ?> <?php echo $this->correspondenceDataAddressLocalNumber; ?></span>
+                                </p>
+                            </div><!-- large-6 medium-6 columns -->
+                            <div class="large-12 medium-12 columns">
+                                <p>
+                                    <span class="name3"><?php echo $this->correspondenceDataAddressZipCode; ?> <?php echo $this->correspondenceDataAddressCity; ?></span>
+                                </p>
+                            </div><!-- large-6 medium-6 columns -->
+                        <?php endif; ?>
+
+                        <?php if($this->correspondenceDataPhoneEnable) : ?>
+                            <div class="large-12 medium-12 columns">
+                                <p>
+                                    <span class="name3">Tel: <?php echo $this->correspondenceDataPhoneValue; ?></span>
+                                </p>
+                            </div><!-- large-6 medium-6 columns -->
+                        <?php endif; ?>
+
+                    </div><!-- row -->
+                </div><!-- panel -->
+            </div><!-- large-12 columns -->
+        </div><!-- row -->
+    </div><!-- div -->
+
+<?php endif; ?>

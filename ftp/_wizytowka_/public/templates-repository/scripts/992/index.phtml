@@ -1,0 +1,121 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title><?php echo $this->businessCardTitle; ?></title>
+    <link rel="icon" href="<?=$this->resourceUrl('992', '/images/favicon.ico');?>" type="image/x-icon"/>
+    <link rel="shortcut icon" href="<?=$this->resourceUrl('992', '/images/favicon.ico');?>" type="image/x-icon"/>
+
+    <script src="<?=$this->baseUrl('common/js/jquery-2.1.3.js');?>" type="text/javascript"></script>
+    <script src="<?=$this->resourceUrl('992', '/js/responsivemobilemenu.js');?>" type="text/javascript"></script>
+    <script src="<?=$this->resourceUrl('992', '/js/modernizr.custom.js');?>" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="<?=$this->baseUrl('common/css/font-Lato-Light.css');?>"/>
+    <link rel="stylesheet" type="text/css" href="<?=$this->baseUrl('common/css/reset.css');?>"/>
+    <link rel="stylesheet" type="text/css" href="<?=$this->baseUrl('common/css/foundation.css');?>"/>
+    <link rel="stylesheet" type="text/css" href="<?=$this->resourceUrl('992', '/style/style.css');?>"/>
+    <link rel="stylesheet" type="text/css" href="<?=$this->resourceUrl('992', '/style/responsivemobilemenu.css');?>"/>
+    <link rel="stylesheet" type="text/css" href="<?=$this->resourceUrl('992', '/style/demo.css');?>"/>
+    <link rel="stylesheet" type="text/css" href="<?=$this->resourceUrl('992', '/style/set1.css');?>"/>
+    <script>
+        $(document).ready(function () {
+            $('.section') == $(this);
+            $('.scroll_down1').on('click', function () {
+                var tabPosition = $(this).offset().top
+                $('body, html').animate({scrollTop: tabPosition}, 300)
+            })
+        })
+    </script>
+</head>
+<body>
+
+<?php
+$templateVersion = 4;
+if($this->mapEnable && $this->formEnable && !$this->offerEnable)
+{
+    $templateVersion = 1; // InfoPodstawowe + mapa + formularz
+}
+elseif($this->mapEnable && !$this->formEnable && !$this->offerEnable)
+{
+    $templateVersion = 2;  // InfoPodstawowe + mapa
+}
+
+elseif(!$this->mapEnable && $this->formEnable && !$this->offerEnable)
+{
+    $templateVersion = 3; // InfoPodstawowe + formularz
+}
+
+elseif(!$this->mapEnable && !$this->formEnable && $this->offerEnable)
+{
+    $templateVersion = 6; // InfoPodstawowe + oferta
+}
+
+elseif(!$this->mapEnable && $this->formEnable && $this->offerEnable)
+{
+    $templateVersion = 7; // InfoPodstawowe + formularz + oferta
+}
+
+elseif($this->mapEnable && !$this->formEnable && $this->offerEnable)
+{
+    $templateVersion = 8; // InfoPodstawowe + mapa + oferta
+}
+
+elseif($this->mapEnable && $this->formEnable && $this->offerEnable)
+{
+    $templateVersion = 5; // InfoPodstawowe + mapa + formularz + oferta
+}
+else
+{
+    $templateVersion = 4;
+}
+?>
+
+<?php include 'version' . $templateVersion . '.phtml'; ?>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="<?=$this->resourceUrl('992', '/js/waypoints.min.js');?>" type="text/javascript"></script>
+<script>
+    var $head = $('.menu_top');
+    $('.ha-waypoint').each(function (i) {
+        var $el = $(this),
+            animClassDown = $el.data('animateDown'),
+            animClassUp = $el.data('animateUp');
+
+        $el.waypoint(function (direction) {
+            if (direction === 'down' && animClassDown) {
+                $head.attr('class', 'menu_top ' + animClassDown);
+            }
+            else if (direction === 'up' && animClassUp) {
+                $head.attr('class', 'menu_top ' + animClassUp);
+            }
+        }, {offset: '1%'});
+    });
+    // -----------------------------------------------------------------------
+    var $section1 = $('.anim1');
+    $('.bg1').each(function (i) {
+        var $el = $(this),
+            animClassDown = $el.data('animateDown'),
+            animClassUp = $el.data('animateUp');
+
+        $el.waypoint(function (direction) {
+            if (direction === 'down' && animClassDown) {
+                $section1.attr('class', '.anim1 ' + animClassDown);
+            }
+            else if (direction === 'up' && animClassUp) {
+                $section1.attr('class', '.anim1 ' + animClassUp);
+            }
+        }, {offset: '1%'});
+    });
+</script>
+<script src="<?=$this->resourceUrl('992', '/js/jquery.nav.js');?>" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+        $('#nav').onePageNav();
+    });
+</script>
+</body>
+</html>
+
+

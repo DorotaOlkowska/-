@@ -1,0 +1,26 @@
+<?php if($this->correspondenceDataEnable) : ?>
+  
+	<div class="large-6 medium-6 columns" style="color: white;">
+
+		<?php if($this->correspondenceDataAddressEnable) : ?>
+			
+                <p class="Adress"><span class="spanTitle"><?php echo $this->correspondenceDataSectionTitle; ?></span> <?php echo $this->correspondenceDataAddressStreet; ?> <?php echo $this->correspondenceDataAddressLocalNumber; ?>
+
+                         
+             <span>
+               <?php echo $this->correspondenceDataAddressZipCode; ?> <?php echo $this->correspondenceDataAddressCity; ?>
+            </span>
+                         
+        <?php endif; ?>
+
+        <?php if($this->correspondenceDataPhoneEnable) : ?>
+                         
+             <p class="Adress"><span class="spanTitle">Telefon:</span> <?php echo $this->correspondenceDataPhoneValue; ?></p>
+                         
+        <?php endif; ?>
+	</div><!-- large-4 medium-4 columns -->	
+
+<?php endif; ?>
+
+
+

@@ -1,0 +1,92 @@
+<?php if($this->formEnable) : ?>
+
+
+  
+
+        <?php if ($this->showSuccessConfirmation) : /* SUCCESS MESSAGE */ ?>
+
+            <h2>Dziękujemy za przesłanie wiadomości!</h2>
+
+            <script>
+                 $(document).ready(function() {
+							var offsetScroll = -5; //Offset of 20px
+							  $("html, body").animate({
+								scrollTop: $('#contact').offset().top + offsetScroll
+							}, 1);
+                        });
+            </script>
+        <?php endif ?>
+
+        <?php if ($this->showContactForm) : /* SUCCESS CONTACT FORM */ ?>
+
+            <?php if($this->contactFormErrors) : /* SHOW FORM LAYER WHEN HAS ERRORS */ ?>
+                  <script>
+                        $(document).ready(function() {
+							var offsetScroll = -5; //Offset of 20px
+							  $("html, body").animate({
+								scrollTop: $('#contact').offset().top + offsetScroll
+							}, 1);
+                        });
+                    </script>
+            <?php endif; ?>
+			
+
+			
+			
+			<h2 class="text-center"><?php echo $this->formSectionTitle; ?></h2>
+			
+
+            <form action="<?php echo $this->contactForm->getAction()?>" method="<?php echo $this->contactForm->getMethod();?>">
+                
+					<div class="row">
+                        <div class="medium-6 large-4 large-offset-2 columns">
+                            <?php echo $this->contactForm->email->renderViewHelper();?>
+							<?php echo $this->contactForm->email->renderErrors()?>
+                        </div>
+                        <div class="medium-6 large-4 end columns">
+                            <?php echo $this->contactForm->phone->renderViewHelper();?>
+							<?php echo $this->contactForm->phone->renderErrors()?>
+                        </div>
+                    </div>
+					
+					<div class="row">
+                        <div class="medium-12 large-8 large-offset-2 columns">
+                            <?php echo $this->contactForm->subject->renderViewHelper();?>
+							<?php echo $this->contactForm->subject->renderErrors()?>
+                        </div>
+                    </div>
+					
+					<div class="row">
+                        <div class="medium-12 large-8 large-offset-2 columns">
+                            <?php echo $this->contactForm->message->renderViewHelper();?>
+							<?php echo $this->contactForm->message->renderErrors()?>
+                        </div>
+                    </div>
+                <?php if($this->contactForm->has('rodoRegulations')): ?>
+					<div class="row">
+                        <div class="medium-12 large-8 large-offset-2 columns">
+                        <div class="offerContent">
+                            <?php echo $this->contactForm->rodoRegulations->renderViewHelper(); ?>
+                            <?php echo $this->contactForm->rodoRegulations->renderErrors() ?>
+                        </div>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+					
+					<div class="row">
+                        <div class="medium-6 medium-offset-4 large-4 large-offset-4 columns captcha">
+                            <?php echo $this->contactForm->captcha->render()?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="medium-6 medium-offset-4 large-4 large-offset-4 columns text-center">
+                            <?php echo $this->contactForm->send->renderViewHelper();?>
+                        </div>
+                    </div>
+					
+            </form>
+
+        <?php endif; ?>
+
+<?php endif; ?>
+

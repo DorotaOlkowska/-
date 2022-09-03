@@ -1,0 +1,731 @@
+body {
+    color: #FFFFFF;
+    background: #645C89;
+}
+
+#bottom_line {
+    background: #bf303c;
+    bottom: 0;
+    display: block;
+    height: 4px;
+    position: fixed;
+    width: 100%;
+}
+
+html, body {
+    height: auto;
+}
+
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* social icon */
+
+ul.menuSocial {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+ul.menuSocial li {
+    list-style: none;
+    float: left;
+    font-size: 0;
+    margin-right: 15px;
+}
+
+ul.menuSocial li:hover {
+    background: none;
+}
+
+ul.menuSocial li a.facebook {
+    background: url('../images/social.png') no-repeat -2px -1px;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+ul.menuSocial li a.facebook:hover {
+    background: url('../images/social.png') no-repeat -2px -22px;
+}
+
+ul.menuSocial li a.instagram {
+    background: url('../images/social.png') no-repeat -22px -1px;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+ul.menuSocial li a.instagram:hover {
+    background: url('../images/social.png') no-repeat -22px -22px;
+}
+
+ul.menuSocial li a.twitter {
+    background: url('../images/social.png') no-repeat -42px -1px;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+ul.menuSocial li a.twitter:hover {
+    background: url('../images/social.png') no-repeat -42px -22px;
+}
+
+ul.menuSocial li a.linkedIn {
+    background: url('../images/social.png') no-repeat -62px -1px;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+ul.menuSocial li a.linkedIn:hover {
+    background: url('../images/social.png') no-repeat -62px -22px;
+}
+
+ul.menuSocial li a.google_plus {
+    background: url('../images/social.png') no-repeat -82px -1px;
+    display: block;
+    width: 22px;
+    height: 20px;
+}
+
+ul.menuSocial li a.google_plus:hover {
+    background: url('../images/social.png') no-repeat -82px -22px;
+}
+
+ul.menuSocial li a.youTube {
+    background: url('../images/social.png') no-repeat -106px -1px;
+    display: block;
+    width: 20px;
+    height: 20px;
+
+}
+
+ul.menuSocial li a.youTube:hover {
+    background: url('../images/social.png') no-repeat -106px -22px;
+}
+
+/* <!-- social icon --> */
+
+#offer {
+    font-family: Open Sans;
+}
+
+#offer h1, #offer h2, #offer h3 {
+    text-align: left;
+    margin: 0;
+
+    padding: 0px !important;
+}
+
+#offer h2 {
+    font-size: 28px;
+}
+
+#offer ul,
+#offer ol {
+    padding-left: 18px;
+}
+
+#offer em, #offer i {
+    font-style: italic;
+    line-height: inherit;
+}
+
+#offer h2 {
+    margin-bottom: 10px;
+}
+
+#offer p, #offer ul, #offer ol {
+    margin-bottom: 10px;
+}
+
+hr.redLine {
+    display: none;
+}
+
+hr.redLine_default {
+    border: 2px solid #BF303C;
+    width: 75px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin: 40px 0 40px 3px;
+    float: none;
+    /*   display: inline-block; */
+}
+
+.space {
+    clear: both;
+    display: inline-block;
+    float: none !important;
+    margin: 20px 0 -12px;
+}
+
+img.all {
+    left: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.bg {
+    margin: 65px auto 0;
+}
+
+h1 {
+    font-size: 51px;
+    font-family: Lato-Light;
+}
+
+p.header_column {
+    font-size: 18px;
+    font-family: Lato-Regular;
+    padding-bottom: 20px;
+}
+
+.large-8,
+.large-4 {
+    margin-top: 50px;
+}
+
+p.about_factory {
+    font-size: 16;
+    font-family: Lato-Light-Italic;
+    white-space: pre-wrap;
+    padding-right: 10%
+}
+
+/* --- */
+
+p.Adress {
+    font-size: 16px;
+    font-family: Lato-Light;
+    padding-left: 35px;
+    margin-bottom: 12px;
+
+    background: url("../images/adres-ico.png") no-repeat;
+}
+
+p.Adress span {
+    font-size: 16px;
+    font-family: Lato-Regular;
+
+    display: inline-table;
+}
+
+span.widthLeft {
+    padding-left: 5px;
+    font-family: Lato-Light !important;
+}
+
+/* --- */
+
+p.Phone {
+    font-size: 16px;
+    font-family: Lato-Light;
+    padding-left: 35px;
+    margin-bottom: 12px;
+
+    background: url("../images/call-ico.png") no-repeat;
+}
+
+p.Phone span {
+    font-size: 16px;
+    font-family: Lato-Regular;
+}
+
+/* --- */
+
+p.Email {
+    font-size: 16px;
+    font-family: Lato-Light;
+    padding-left: 35px;
+    margin-bottom: 12px;
+
+    background: url("../images/majl-ico.png") no-repeat;
+}
+
+p.Email span {
+    font-size: 16px;
+    font-family: Lato-Regular;
+}
+
+/* --- */
+
+p.Nip {
+    font-size: 16px;
+    font-family: Lato-Light;
+    padding-left: 35px;
+    margin-bottom: 12px;
+
+    background: url("../images/nip-ico.png") no-repeat;
+}
+
+p.Nip span {
+    font-size: 16px;
+    font-family: Lato-Regular;
+}
+
+/* --- */
+
+p.Facebook {
+    font-size: 16px;
+    font-family: Lato-Light;
+    padding-left: 35px;
+    margin-bottom: 12px;
+
+    background: url("../images/link-ico.png") no-repeat;
+}
+
+p.Facebook span {
+    font-size: 16px;
+    font-family: Lato-Regular;
+}
+
+img.imagesFacebook {
+    position: relative;
+    top: 4px;
+}
+
+/* linki */
+
+p.links1 {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border: 1px solid #FFFFFF;
+    background-color: rgba(255, 255, 255, .1);
+    float: left;
+    margin: 0 20px 10px 0;
+    transition: all 0.3s ease 0s;
+}
+
+a.block4_Korespond {
+    background: url("../images/dane-kontaktowe-ico.png") no-repeat scroll 14px 6px rgba(0, 0, 0, 0);
+    color: #e4e4e9;
+    display: block;
+    font-family: Lato-Light;
+    font-size: 14px;
+    padding: 9px 25px 9px 40px;
+    text-decoration: none;
+}
+
+p.links2 {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border: 1px solid #FFFFFF;
+    background-color: rgba(255, 255, 255, .1);
+    float: left;
+    transition: all 0.3s ease 0s;
+}
+
+a.block4_Form {
+    color: #e4e4e9;
+    display: block;
+    font-family: Lato-Light;
+    font-size: 14px;
+    padding: 9px 30px 9px 40px;
+    text-decoration: none;
+}
+
+a.block4_FormOffer {
+    color: #e4e4e9;
+    display: block;
+    font-family: Lato-Light;
+    font-size: 14px;
+    padding: 9px 30px 9px 30px;
+    text-decoration: none;
+}
+
+p.links1:hover,
+p.links2:hover {
+    background: #675E86;
+}
+
+/* --- */
+
+#mapFrame {
+    width: 100%;
+    height: 100%;
+}
+
+.maps {
+    height: 420px;
+    width: 100%;
+}
+
+.maps img { /* fundation google maps fix */
+    max-width: none;
+}
+
+#googleMap {
+    width: 100%;
+    height: 100%;
+}
+
+.link_container {
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.gm-style-iw {
+    color: black;
+}
+
+span.newLine {
+    display: block !important;
+    padding-top: 2px;
+    font-family: Lato-Light !important;
+}
+
+/* PopUp */
+
+.blur {
+    filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -webkit-filter: blur(4px);
+
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='4');
+}
+
+/* for FF */
+@-moz-document url-prefix() {
+    .blur {
+        color: transparent;
+        text-shadow: 0 0 10px #FFF;
+        opacity: 0.3;
+    }
+}
+
+/* for opera */
+doesnotexist:-o-prefocus, .blur {
+    color: transparent;
+    text-shadow: 0 0 10px #FFF;
+    opacity: 0.3;
+}
+
+.pop h2 {
+    font-family: Lato-Light;
+    font-Size: 53px;
+    padding-bottom: 45px;
+    padding-left: 10px;
+}
+
+.pop span.name1,
+.pop span.name2,
+.pop span.name3 {
+    font-family: Lato-Thin;
+    font-size: 34px;
+    display: block;
+}
+
+.pop span.name2.paddingLeftNone {
+    padding-left: 14px;
+}
+
+.pop span.name1 img {
+    margin-right: 20px;
+}
+
+.pop span.name2,
+.pop span.name3 {
+    padding-left: 45px;
+}
+
+#adres-do-korespondencji-szczegoly {
+    width: auto;
+    /*	margin: 100px auto; */
+}
+
+#adres-do-korespondencji-szczegoly .panel {
+    margin-left: 20%;
+}
+
+p.addresImg {
+    background: url('../images/korespo-ico.png') no-repeat 0 center;
+}
+
+p.addresImg span {
+    padding-left: 45px;
+}
+
+#fancybox-outer {
+    background: none !important;
+}
+
+#fancybox-content {
+    color: rgba(255, 255, 255, 0.9);
+    border: none !important;
+
+    /* eksperyment */
+    width: 100% !important;
+}
+
+#fancybox-overlay {
+    background-color: rgba(79, 73, 120, 0.9) !important;
+    background: rgba(79, 73, 120, 0.9) !important;
+}
+
+#fancybox-close {
+    background: url("../images/kross-ico.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    position: fixed !important;
+    right: 20px !important;
+    top: 20px !important;
+    height: 32px !important;
+    width: 32px !important;
+}
+
+.blur {
+    filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -webkit-filter: blur(10px);
+
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='10');
+}
+
+#fancybox-wrap {
+    display: block;
+    width: 100% !important;
+    /*	height: 70% !important;
+        margin-left: 20% !important;   */
+    left: 0px !important;
+}
+
+/* formularz */
+
+#formularz-do-korespondencji-szczegoly {
+    max-width: 555px;
+}
+
+.textInput, #captcha-input, textarea {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9em;
+    font-family: Helvetica, Arial, sans-serif;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.textInput {
+    background: none;
+    border: 1px solid #FFFFFF;
+    width: 100%;
+    height: 54px;
+}
+
+textarea {
+    background: none;
+    resize: none;
+    border: 1px solid #FFFFFF;
+    width: 100%;
+    height: 202px;
+    padding: 1em;
+}
+
+#captchaContainer {
+    float: left;
+}
+
+#captcha-input {
+    background: none;
+    border: 1px solid #FFFFFF;
+    width: 86px;
+    height: 54px;
+    text-align: center;
+}
+
+#captchaContainer img {
+    opacity: 0.6;
+    float: left;
+    margin: 0 1em 0 0;
+}
+
+#captchaContainer pre {
+    font-family: "Courier New", Courier, monospace;
+    float: left;
+    color: #FFF;
+    border: 1px solid #FFF;
+    line-height: 76%;
+    font-size: 10px;
+    letter-spacing: -2px;
+    margin: 0 1em 1em 0;
+    /*transform: scale(0.6);*/
+    height: 54px;
+}
+
+.buttonSend:focus {
+    outline: 0;
+}
+
+.pnlSend .large-8.medium-8.columns,
+.pnlSend .large-4.medium-4.columns {
+    margin-top: 0px;
+}
+
+.pnlSend p {
+    font-family: Lato-Regular;
+    font-size: 20px;
+    padding-top: 14px;
+}
+
+.pnlSend p span {
+    font-family: Lato-Light;
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.second {
+    /* margin-left: 17px;  */
+}
+
+#formularz-do-korespondencji-szczegoly p {
+    float: left;
+}
+
+.pnlSend {
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+}
+
+#send {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border: 1px solid #FFFFFF;
+    padding: 9px 30px 9px 30px;
+    font-family: Lato-Light;
+    font-size: 20px;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 10px;
+    margin-top: 6px;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    background: rgba(79, 73, 120, 0.9);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+ul.errors {
+    clear: both;
+    list-style: none;
+    margin: -0.5em 0 1em 0;
+    color: #BF303C;
+    font-size: 0.9em;
+    font-style: italic;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* media queries */
+
+@media screen and (max-width: 960px) {
+
+    #adres-do-korespondencji-szczegoly .panel {
+        margin-left: 10%;
+    }
+
+}
+
+@media screen and (max-width: 950px) {
+    #formularz-do-korespondencji-szczegoly {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+
+    /* widoczno�� lini nad nasz� lokalizacj� */
+    hr.redLine {
+        display: block;
+        border: 2px solid #BF303C;
+        width: 75px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        margin: 0 0 30px;
+    }
+
+    .buttonSend {
+        float: left;
+    }
+
+    .maps {
+        height: 477px;
+    }
+
+    .txtcapcha {
+        float: left;
+    }
+
+    .pop h2 {
+        font-Size: 36px;
+    }
+
+    .pop span.name1,
+    .pop span.name2,
+    .pop span.name3 {
+        font-size: 23px;
+        font-family: Lato-Light;
+    }
+
+}
+
+@media screen and (max-width: 476px) {
+
+    p.links2 {
+        margin-top: 20px;
+    }
+
+    .pop h2 {
+        font-Size: 25px;
+    }
+
+    .pop span.name1,
+    .pop span.name2,
+    .pop span.name3 {
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 452px) {
+
+    .buttonSend {
+        float: right;
+    }
+
+}
+
+@media screen and (max-width: 560px) {
+    #send {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        clear: both;
+    }
+
+    .right {
+        float: none !important;
+    }
+}
+
+.label_rodoRegulations p {
+    margin: 0 0 20px 0;
+}

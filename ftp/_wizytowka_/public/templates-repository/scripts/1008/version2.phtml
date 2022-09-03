@@ -1,0 +1,68 @@
+<div id="container" class="container">
+
+	<!-- menu -->
+	<div id="menu-wrapper">
+        <div id="menu-panel">
+				<h3>Menu</h3>
+                <ul id="menu-left">
+                    <li><a href="<?php echo $this->baseUrl('#'); ?>" id="menu-about" class="active"><?php echo $this->basicInfoSectionTitle; ?></a></li>
+                    <li><a href="<?php echo $this->baseUrl('#'); ?>" id="menu-info"><?php echo $this->detailsDataSectionTitle; ?></a></li>
+
+                    <li><a href="<?php echo $this->baseUrl('#'); ?>" id="menu-map" class="mapInvoker"><?php echo $this->mapSectionTitle; ?></a></li>
+
+                </ul>
+        </div>
+				<span id="menu-button"><span class="pages-icon"></span>Menu</span>
+    </div>
+	<!-- menu -->
+		
+	<!-- o nas -->
+	<div class="pages-single" id="about">
+        <div class="content">
+            <div class="row">
+                <div class="small-12 medium-10 medium-offset-2 large-6 large-offset-6 columns end">
+                    <?php include 'partials/mainheader.phtml'; ?>
+                    <?php include 'partials/basicinfo.phtml'; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- o nas -->
+
+		<!-- adres -->
+	<div class="pages-single" id="info">
+        <div class="content">
+            <div class="row">
+				<div class="small-12 medium-10 medium-offset-2 large-6 large-offset-6 columns end">
+					<?php include 'partials/detailsdata.phtml'; ?>
+					<?php include 'partials/correspondencedata.phtml'; ?>
+				</div>
+             </div>
+         </div>
+     </div>
+	<!-- adres -->	
+
+
+	
+	<!-- mapa -->
+	        <div class="pages-single" id="map">
+            <div class="content">
+                <div class="row">
+<div class="small-12 medium-10 medium-offset-2 large-6 large-offset-6 columns end">
+    <h2><?php echo $this->mapSectionTitle; ?></h2>
+</div>
+                    <div class="small-12 medium-10 medium-offset-2 large-6 large-offset-6 columns end">
+                       
+                        <div id="googleMap"><?php include 'partials/map.phtml'; ?></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	<!-- mapa -->
+	
+
+	
+	
+	
+	
+</div>

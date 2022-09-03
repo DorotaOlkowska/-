@@ -1,0 +1,128 @@
+    <header>
+        <div class="row">
+            <div id="menu-wrapper" class="small-12 columns contain-to-grid fixed">
+                <nav id="menu" role="navigation">
+                    <ul id="main-menu">
+                        <li><a href="#start">Start</a></li>
+                        <li><a href="#about"><?php echo $this->basicInfoSectionTitle; ?></a></li>
+                        <li><a href="#info"><?php echo $this->detailsDataSectionTitle; ?></a></li>
+                        <li><a href="#map"><?php echo $this->mapSectionTitle; ?></a></li>
+                    </ul>
+                    <div id="menu-trigger"><span></span></div>
+                </nav>
+            </div>
+            <div id="menu-trigger-m"><span></span></div>
+        </div>
+    </header>	
+	
+	<div id="start" class="section section-gray">
+        <div class="row">
+            <div class="small-12 large-10 large-offset-1 columns text-center">
+                <?php include 'partials/mainheader.phtml'; ?>
+            </div>
+            <div id="mouse"></div>
+        </div>
+		<img id="img-coffee" src="<?php echo $this->resourceUrl('1183', '/images/img-coffee.png'); ?>">
+		<img id="img-tools" src="<?php echo $this->resourceUrl('1183', '/images/img-tools.png'); ?>">
+    </div>
+	
+	<div id="about" class="section">
+        <div class="row">
+			<?php include 'partials/basicinfo.phtml'; ?>		
+        </div>
+    </div>
+	
+	
+	<div id="info" class="section section-blue">
+        <div class="row">
+            <div class="small-12 large-6 columns">
+                
+                    <?php include 'partials/detailsdata.phtml'; ?>
+              
+            </div>
+            <div class="small-12 large-6 end columns text-center data">
+                <?php include 'partials/correspondencedata.phtml'; ?>
+            </div>
+        </div>
+    </div>
+	
+	
+	<div id="map" class="section">
+        <div class="row">
+            <?php include 'partials/map.phtml'; ?>
+        </div>
+    </div>
+	
+	<footer>
+        <div class="row">
+            <div class="small-12 medium-6 columns company">
+                <p><strong><strong></p>
+            </div>
+            <div class="small-12 medium-6 end columns social" style="float: right;">
+			<?php if($this->socialMediaEnable) : ?>
+				<ul class="inline-list social-icons">
+				<?php if($this->socialMediaFacebookEnable) : ?>
+					<li>
+						
+							<a href="<?php echo $this->socialMediaFacebookUrl; ?>" class="fb" target="_blank"><span>facebook</span></a>
+						
+					</li>
+				<?php endif; ?>	
+					
+					
+					<?php if($this->socialMediaInstagramEnable) : ?>
+					<li>
+						
+							<a href="<?php echo $this->socialMediaInstagramUrl; ?>" class="ig" target="_blank"><span>instagram</span></a>
+						
+					</li>
+					<?php endif; ?>
+					
+					<?php if($this->socialMediaTwitterEnable) : ?>
+					<li>
+						
+							<a href="<?php echo $this->socialMediaTwitterUrl; ?>" class="tw" target="_blank"><span>twitter</span></a>
+						
+					</li>
+					<?php endif; ?>
+					
+					<?php if($this->socialMediaLinkedInEnable) : ?>
+					<li>
+						
+							<a href="<?php echo $this->socialMediaLinkedInUrl; ?>" class="li" target="_blank"><span>linkedin</span></a>
+						
+					</li>
+					<?php endif; ?>
+					
+					<?php if($this->socialMediaGooglePlusEnable) : ?>
+					<li>
+						
+							<a href="<?php echo $this->socialMediaGooglePlusUrl; ?>" class="gp" target="_blank"><span>google plus</span></a>
+						
+					</li>
+					<?php endif; ?>
+					
+					<?php if($this->socialMediaYouTubeEnable) : ?>
+					<li>
+						
+							<a href="<?php echo $this->socialMediaYouTubeUrl; ?>" class="yt" target="_blank"><span>youtube</span></a>
+						
+					</li>
+					<?php endif; ?>
+				</ul>	
+				<?php endif; ?>
+            </div>
+        </div>
+    </footer>
+    
+    <div id="modal"></div>
+	
+	
+    <script src="<?php echo $this->resourceUrl('1183', '/js/jsmore/libs.min.js'); ?>"></script>
+	<script src="<?php echo $this->resourceUrl('1183', '/js/foundation.min.js'); ?>"></script>
+    <script src="<?php echo $this->resourceUrl('1183', '/js/custom.js'); ?>"></script>
+	<script>
+        $(document).foundation();
+    </script>
+	
+	

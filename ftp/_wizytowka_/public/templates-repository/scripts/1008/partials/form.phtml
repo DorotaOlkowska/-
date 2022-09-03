@@ -1,0 +1,119 @@
+﻿
+<?php if($this->formEnable) : ?>
+ 
+
+
+
+        <?php if ($this->showSuccessConfirmation) : /* SUCCESS MESSAGE */ ?>
+
+            <h2>Dziękujemy za przesłanie wiadomości!</h2>
+
+				<script>
+                     $(document).ready(function() {
+                        $('.pages-single').hide();
+						$('#contact').show();
+                    });
+                </script>
+				
+        <?php endif ?>
+
+        <?php if ($this->showContactForm) : /* SUCCESS CONTACT FORM */ ?>
+
+            <?php if($this->contactFormErrors) : /* SHOW FORM LAYER WHEN HAS ERRORS */ ?>
+			
+                 <script>
+                    $(document).ready(function() {
+                        $('.pages-single').hide();
+						$('#contact').show();
+                    });
+                </script>
+				
+            <?php endif; ?>
+			
+			
+			
+			
+			<h2><?php echo $this->formSectionTitle; ?></h2>
+
+            <form action="<?php echo $this->contactForm->getAction()?>" method="<?php echo $this->contactForm->getMethod();?>">
+			
+			
+			
+				<div class="row">
+                    <div class="medium-6 columns">
+                        <?php echo $this->contactForm->email->renderViewHelper();?>
+						<?php echo $this->contactForm->email->renderErrors()?>
+                    </div>
+                    <div class="medium-6 columns">
+                        <?php echo $this->contactForm->phone->renderViewHelper();?>
+						<?php echo $this->contactForm->phone->renderErrors()?>
+                    </div>
+                </div>
+				
+				
+				
+				<div class="row">
+                    <div class="medium-12 columns">
+                        <?php echo $this->contactForm->subject->renderViewHelper();?>
+						<?php echo $this->contactForm->subject->renderErrors()?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="medium-12 columns">
+                        <?php echo $this->contactForm->message->renderViewHelper();?>
+						<?php echo $this->contactForm->message->renderErrors()?>
+                    </div>
+                </div>
+                <?php if($this->contactForm->has('rodoRegulations')): ?>
+                <div class="row">
+                    <div class="medium-12 columns">
+                        <div class="offerContent">
+                            <?php echo $this->contactForm->rodoRegulations->renderViewHelper(); ?>
+                            <?php echo $this->contactForm->rodoRegulations->renderErrors() ?>
+                        </div>
+                    </div>
+                </div>
+
+                    <?php endif; ?>
+
+				<div class="row captcha">
+					<div class="small-12 medium-12 columns">
+							<?php echo $this->contactForm->captcha->render()?>
+						
+						<?php echo $this->contactForm->send->renderViewHelper();?>
+					</div>
+                </div>
+				
+				
+
+
+            </form>
+
+
+        <?php endif; ?>
+
+
+
+
+
+<?php endif; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+  
+
+

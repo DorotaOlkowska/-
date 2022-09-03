@@ -1,0 +1,33 @@
+<?php if($this->correspondenceDataEnable) : ?>
+   
+      <!--  <?php echo $this->correspondenceDataSectionTitle; ?> -->
+
+
+    <!-- warstwa adres do korespondencji -->
+   
+	<img src="<?php echo $this->resourceUrl('223', '/images/danedokorespondencji-ico.png'); ?>" alt="" />
+        <p class="header_column"><?php echo $this->correspondenceDataSectionTitle; ?></p>
+
+            <p>
+                <?php echo $this->businessCardTitle; ?>
+            </p>
+                        
+            <?php if($this->correspondenceDataAddressEnable) : ?>
+                         
+            <p>
+                <?php echo $this->correspondenceDataAddressStreet; ?> <?php echo $this->correspondenceDataAddressLocalNumber; ?>
+            </p>
+                         
+            <p>
+				<?php echo $this->correspondenceDataAddressZipCode; ?> <?php echo $this->correspondenceDataAddressCity; ?>
+            </p>
+                         
+            <?php endif; ?>
+
+            <?php if($this->correspondenceDataPhoneEnable) : ?>
+                         
+                 <p><span class="name3">Tel:</span> <?php echo $this->correspondenceDataPhoneValue; ?></p>
+                         
+            <?php endif; ?>
+
+<?php endif; ?>

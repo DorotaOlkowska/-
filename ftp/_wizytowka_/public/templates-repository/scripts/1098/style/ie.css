@@ -1,0 +1,27 @@
+#canvas-stars {
+    display: none;
+}
+.section#start {
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    margin-top: -61px;
+}
+.section#start .row {
+    display: table-cell;
+    height: 100vh;
+    vertical-align: middle;
+}
+.section#start .columns {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+}
+.section#start h1 {
+    position: relative;
+    margin: 0;
+    padding: 0 10%;
+    top: 0;
+    left: 0;
+    transform: none;
+}

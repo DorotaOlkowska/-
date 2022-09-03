@@ -1,0 +1,91 @@
+ <img src="<?php echo $this->resourceUrl('862', '/images/bg.jpg'); ?>" alt="" class="all big" />
+ <img src="<?php echo $this->resourceUrl('862', '/images/bg-mobile.jpg'); ?>" alt="" class="all mobile" />
+
+<div class="row">
+	<div class="large-12 columns bg">
+		<div class="panel">
+			<?php include 'partials/mainheader.phtml'; ?>
+			<?php include 'partials/basicinfo.phtml'; ?>
+		</div><!-- panel -->
+	</div><!-- large-12 columns bg -->
+</div><!-- row -->
+
+<div class="row">
+    <div class="large-12 columns">
+	
+		<div class="empty-men-div">
+			<div id="my-menu">
+				<div class="navdesktop">
+					<a href="#address" class="link-pos com-address">
+						<img src="<?php echo $this->resourceUrl('862', '/images/danefirmowe-ico.png'); ?>" alt="" />
+						<span><?php echo $this->detailsDataSectionTitle; ?></span>
+					</a>
+					<a href="#compost" class="link-pos com-post">
+						<img src="<?php echo $this->resourceUrl('862', '/images/danedokorespondencji-ico.png'); ?>" alt="" />
+						<span><?php echo $this->correspondenceDataSectionTitle; ?></span>
+					</a>
+					<a href="#gmaps" class="link-pos com-maps mapInvoker">
+						<img src="<?php echo $this->resourceUrl('862', '/images/mapa-1.png'); ?>" alt="" />
+						<span><?php echo $this->mapSectionTitle; ?></span>
+					</a>
+					<a href="#contact" class="link-pos com-form">
+						<img src="<?php echo $this->resourceUrl('862', '/images/formularz-1.png'); ?>" alt="" />
+						<span><?php echo $this->formSectionTitle; ?></span>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- dane firmowe -->
+		<div id="address" class="blockContent contDaneFirm">
+			
+			<a name="danefirmowe"></a>
+			<div class="overflow">
+				<div class="lineFirmowe"></div>
+				<div class="dziubFirma"></div>
+				<div class="line2Firmowe"></div>
+			</div><!-- overflow -->
+			<?php include 'partials/detailsdata.phtml'; ?>
+		</div>
+		
+		<div id="compost" class="blockContent contKorespond">
+			<div class="overflow">
+				<div class="lineKorespond"></div>
+				<div class="dziubKorespond"></div>
+				<div class="line2Korespond"></div>
+			</div><!-- overflow -->
+			<?php include 'partials/correspondencedata.phtml'; ?>
+			<br>
+		</div><!-- blockContent -->
+		
+		
+		<!-- lokalizacja -->
+		<div id="gmaps" class="blockContent contLokali">
+			<div class="overflow">
+				<div class="lineLokali"></div>
+				<div class="dziub"></div>
+				<div class="line2Lokali"></div>
+			</div><!-- overflow -->
+			<?php include 'partials/map.phtml'; ?>
+			<div class="line"></div>
+		</div><!-- blockContent -->
+		
+		
+		<div id="contact" class="blockContent contFormula">
+			<div class="overflow">
+				<div class="lineForm"></div>
+				<div class="dziubForm"></div>
+				<div class="line2Form"></div>
+			</div><!-- overflow -->
+			<?php include 'partials/form.phtml'; ?>	
+		</div><!-- blockContent -->
+	
+	</div><!-- large-12 columns -->
+</div><!-- row -->
+
+
+
+	
+	
+	
+	

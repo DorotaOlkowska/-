@@ -1,0 +1,72 @@
+<?php if($this->detailsDataEnable) : ?>
+
+    <h2><?php echo $this->detailsDataSectionTitle; ?></h2>
+	
+	
+	<?php if($this->detailsDataAddressEnable) : ?>
+		<p><strong>Adres:</strong><br><?php echo $this->detailsDataAddressStreet; ?> <?php echo $this->detailsDataAddressLocalNumber; ?><br>
+		<?php echo $this->detailsDataAddressZipCode; ?> <?php echo $this->detailsDataAddressCity; ?></p>
+	<?php endif; ?>
+	
+	<?php if($this->detailsDataPhoneEnable) : ?>
+		<strong>Tel.:</strong> <?php echo $this->detailsDataPhoneValue; ?><br>
+	<?php endif; ?>
+				
+	<?php if($this->detailsDataEmailEnable) : ?>
+		<strong>E-mail:</strong> <a href="mailto:<?php echo $this->detailsDataEmailValue; ?>"><?php echo $this->detailsDataEmailValue; ?></a><br>
+	<?php endif; ?>
+				
+	<?php if($this->detailsDataNipEnable) : ?>
+		<strong>NIP:</strong> <?php echo $this->detailsDataNipValue; ?>
+	<?php endif; ?>
+	</p>
+	<?php if($this->detailsDataLinkEnable) : ?>
+		<li class="info"><span class="icon"></span><strong>Adres WWW: </strong><a href="http://<?php echo $this->detailsDataLinkValue; ?>" target="_blank"><?php echo $this->detailsDataLinkValue; ?></a></li>
+	<?php endif; ?>
+
+
+	
+		<?php if($this->socialMediaEnable) : ?>
+			<ul class="inline-list social-icons">
+			
+			<?php if($this->socialMediaFacebookEnable) : ?>
+				<li>
+					<a href="<?php echo $this->socialMediaFacebookUrl; ?>" class="fb" target="_blank"><span>facebook</span></a>
+				</li>
+			<?php endif; ?>
+			
+			<?php if($this->socialMediaInstagramEnable) : ?>			
+				<li>
+					<a href="<?php echo $this->socialMediaInstagramUrl; ?>" class="ig" target="_blank"><span>instagram</span></a>
+				</li>
+			<?php endif; ?>
+				
+			<?php if($this->socialMediaTwitterEnable) : ?>
+				<li>
+					<a href="<?php echo $this->socialMediaTwitterUrl; ?>" class="tw" target="_blank"><span>twitter</span></a>
+				</li>
+			<?php endif; ?>
+
+			<?php if($this->socialMediaLinkedInEnable) : ?>			
+				<li>
+					<a href="<?php echo $this->socialMediaLinkedInUrl; ?>" class="li" target="_blank"><span>linkedin</span></a>
+				</li>
+			<?php endif; ?>
+
+
+			<?php if($this->socialMediaGooglePlusEnable) : ?>			
+				<li>
+					<a href="<?php echo $this->socialMediaGooglePlusUrl; ?>" class="gp" target="_blank"><span>google plus</span></a>
+				</li>
+			<?php endif; ?>
+
+			<?php if($this->socialMediaYouTubeEnable) : ?>			
+				<li>
+					<a href="<?php echo $this->socialMediaYouTubeUrl; ?>" class="yt" target="_blank"><span>youtube</span></a>
+				</li>
+			<?php endif; ?>
+			</ul>	
+		<?php endif; ?>
+			
+<?php endif; ?>
+

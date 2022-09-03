@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html ng-app="templatesPreview">
+<head lang="pl">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+
+    <link rel="stylesheet" href="<?php echo $this->baseUrl('/preview-assets/css/bootstrap.min.css');?>" type="text/css" media="all" />
+    <link rel="stylesheet" href="<?php echo $this->baseUrl('/preview-assets/css/style.css');?>" type="text/css" media="all" />
+    <link rel="stylesheet" href="<?php echo $this->baseUrl('/preview-assets/owl-carousel/owl.carousel.css');?>" type="text/css" media="all" />
+    <link rel="stylesheet" href="<?php echo $this->baseUrl('/preview-assets/owl-carousel/owl.theme.css');?>" type="text/css" media="all" />
+
+    <link rel="icon" href="<?php echo $this->baseUrl('/preview-assets/img/favicon.ico');?>" type="image/x-icon" />
+    <link rel="shortcut icon" href="<?php echo $this->baseUrl('/preview-assets/img/favicon.ico');?>" type="image/x-icon" />
+
+    <script type="text/javascript" src="<?php echo $this->baseUrl('/preview-assets/js/jquery-2.1.4.min.js');?>"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl('/preview-assets/js/angular.min.js');?>"></script>
+    <script type="text/javascript">
+
+        var previewSettings = {
+            templatePreviewUrl: '<?php echo '/init/preview/update/'?>',
+            templatesRepository: ['992', '1112', '1008', '1183', '1038', '1098', '888', '923', '902', '704', '288', '223', '862', '139', '752', '324', '297', '724'],
+            defaultTemplate: '<?php echo $this->templateName; ?>'
+        };
+    </script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl('/preview-assets/js/app.js');?>"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl('/preview-assets/owl-carousel/owl.carousel.js');?>"></script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-33178029-1']);
+        _gaq.push(['_setDomainName', 'nazwa.pl']);
+        _gaq.push(['_trackPageview']);
+        (function()
+        { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); }
+        )();
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var owl = $("#templates")
+
+            owl.owlCarousel({
+                items : 9,
+                itemsCustom: [ [0,2], [300, 3], [390, 4], [510,5], [650,6], [1199,9]],
+                navigation: false,
+                pagination: false,
+                afterInit: afterInit
+            });
+
+            function afterInit(){
+                this.jumpTo( previewSettings['templatesRepository'].indexOf(previewSettings['defaultTemplate']) );
+            }
+
+            // Custom Navigation Events
+            $("#next").click(function(){
+                owl.trigger('owl.next');
+            })
+            $("#prev").click(function(){
+                owl.trigger('owl.prev');
+            })
+        })
+    </script>
+
+    <title>Wizytówka internetowa - nowoczesna, profesjonalna strona www&nbsp;| nazwa.pl</title>
+</head>
+<body ng-controller="templatesPrevievController" ng-class="hideNavi ? 'hideNavi' : 'showNavi'">
+
+
+<header class="container-fluid" id="templatesNavi">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xs-12">
+
+                <!-- <?php if( !empty($this->isAllowedToActive) ) : ?>
+                    <div id="templatesGalleryDescription">
+                        <h4>Wizytówka gotowa do odbioru!</h4>
+                        <p>Tak będzie wyglądać Twoja pierwsza profesjonalna strona WWW. Nowoczesna, atrakcyjna, z Twoimi danymi (edycja w każdej chwili poprzez Panel Klienta). Zamów wizytówkę i korzystaj bez zobowiązań. Czas zadbać o wizerunek w Internecie!</p>
+                    </div>
+                <?php else: ?>
+                    <div id="templatesGalleryDescription">
+                        <h4>Wizytówka gotowa do odbioru!</h4>
+                        <p>Tak będzie wyglądać Twoja pierwsza profesjonalna strona WWW. Nowoczesna, atrakcyjna, z Twoimi danymi (edycja w każdej chwili poprzez Panel Klienta). Zamów wizytówkę i korzystaj bez zobowiązań. Czas zadbać o wizerunek w Internecie!</p>
+                    </div>
+                <?php endif; ?> -->
+
+                <div id="templatesGallery">
+                    <h4>Wybierz projekt</h4>
+
+                    <?php if( !empty($this->isAllowedToActive) ) : ?>
+                        <div class="row galleryRow">
+
+                            <div class="col-md-8 col-lg-8" id="col-templates">
+                                <span id="prev"></span>
+                                <div id="templates">
+                                    <label ng-repeat="thisTemplate in templatesRepository" class="input-group pull-left template-item">
+                                        <input type="radio" name="businessCardTemplateName" ng-model="$parent.currentTemplate" value="{{thisTemplate}}" />
+                                        <img src="<?php echo $this->baseUrl('/templates-repository/scripts/{{thisTemplate}}/meta/preview.png');?>" alt="{{thisTemplate}}" title="Projekt {{thisTemplate}}" />
+                                        <span class="selected"></span>
+                                    </label>
+                                </div>
+                                <span id="next"></span>
+                            </div>
+
+                            <div class="col-md-4 col-lg-4" id="col-order">
+                                    <a onclick="_gaq.push(['_trackEvent','podglad_wizytowki',$('input[name=\'businessCardTemplateName\']').val(), 'Aktywuj']);"
+                                <?php if( !empty($this->serwerID) && !empty($this->pkActivateToken) ) : ?>
+                                    href="https://panel.nazwa.pl/AktywujWizytowke.html?serverId=<?php echo $this->serwerID; ?>&token=<?php echo $this->pkActivateToken; ?>&templateName={{currentTemplate}}" class="btn btn-warning btn-lg order-button">
+                                <?php else: ?>
+                                    href="https://panel.nazwa.pl/pk-serwery-twoje-serwery.html" class="btn btn-warning btn-lg order-button">
+                                <?php endif; ?>
+                                        Aktywuj&nbsp;&nbsp;<span style="font-size: 150%;">&rsaquo;</span>
+                                    </a>
+                                    <a id="return-link" href="https://www.nazwa.pl/kampania,wizytowka,9337.html">Przejdź na nazwa.pl/wizytowka &raquo;</a>
+                            </div>
+
+                        </div>
+                    <?php else: ?>
+                        <form name="myForm" class="row galleryRow" action="https://www.nazwa.pl/wizytowka/" method="post">
+
+                            <input type="hidden" name="redirectUrl" value="<?php echo !empty($this->redirectUrl) ? $this->redirectUrl : '/kampania,koszyk,9337.html' ?>" />
+                            <input type="hidden" name="serviceType" value="SERVER_TYPE" />
+                            <input type="hidden" value="true" name="serviceReadyForAddToCart" />
+                            <input type="hidden" name="serverType" value="cloudhosting_start" />
+                            <input type="hidden" name="businessCard" value="1" />
+                            <input type="hidden" name="visibility" value="1">
+                            <input type="hidden" name="promotionName" value="<?php echo !empty($this->promotionName) ? $this->promotionName : 'PROMOTION_DEFAULT' ?>">
+
+                            <div class="col-md-8 col-lg-8" id="col-templates">
+                                <span id="prev"></span>
+                                <div id="templates">
+                                    <label ng-repeat="thisTemplate in templatesRepository" class="input-group pull-left template-item">
+                                        <input type="radio" name="businessCardTemplateName" ng-model="$parent.currentTemplate" value="{{thisTemplate}}" />
+                                        <img src="<?php echo $this->baseUrl('/templates-repository/scripts/{{thisTemplate}}/meta/preview.png');?>" alt="{{thisTemplate}}" title="Projekt {{thisTemplate}}" />
+                                        <span class="selected"></span>
+                                    </label>
+                                </div>
+                                <span id="next"></span>
+                            </div>
+
+                            <div class="col-md-4 col-lg-4" id="col-order">
+                                <button onclick="_gaq.push(['_trackEvent','podglad_wizytowki',$('input[name=\'businessCardTemplateName\']').val(), 'Zamow']);" type="submit" class="btn btn-warning btn-lg order-button">Dodaj do koszyka&nbsp;&nbsp;<span style="font-size: 150%;">&rsaquo;</span></button>
+                                <a id="return-link" href="https://www.nazwa.pl/kampania,wizytowka,9337.html">Przejdź na nazwa.pl/wizytowka &raquo;</a>
+                            </div>
+
+                        </form>
+                    <?php endif; ?>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <span id="templatesNaviMinimalization" ng-click="hideNavi = !hideNavi; windowResize(); triggerMinimalizationGa();"></span>
+
+</header>
+
+<div clas="row">
+
+    <iframe ng-src="{{getIframePath()}}" id="templateFrame" name="templateFrame"></iframe>
+
+</div>
+
+</body>
+</html>

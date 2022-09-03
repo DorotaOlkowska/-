@@ -1,0 +1,117 @@
+
+    <header>
+        <div class="row" data-magellan-expedition>
+            <div class="small-12 columns contain-to-grid fixed">
+                <nav class="top-bar" data-topbar role="navigation" data-options="scrolltop: false">
+                    <ul class="title-area">
+                        <li class="name"></li>
+                        <li class="toggle-topbar menu-icon"><a href="<?php echo $this->baseUrl('#'); ?>"><span></span></a></li>
+                    </ul>
+                    <div class="section top-bar-section">
+                        <ul id="main-menu" class="left">
+                            <li class="about active" data-magellan-arrival="about"><a target="_self" href="#about"><?php echo $this->basicInfoSectionTitle; ?></a></li>
+                            <li class="info" data-magellan-arrival="info"><a target="_self" href="#info"><?php echo $this->detailsDataSectionTitle; ?></a></li>
+                        </ul>
+								<?php if($this->socialMediaEnable) : ?>
+                        <ul class="right inline-list social-icons">
+						
+							<?php if($this->socialMediaFacebookEnable) : ?>
+                            <li>
+								<a href="<?php echo $this->socialMediaFacebookUrl; ?>" class="fb" target="_blank">facebook</a>
+							</li>
+							<?php endif; ?>
+							
+							<?php if($this->socialMediaInstagramEnable) : ?>
+                            <li>
+								
+									<a href="<?php echo $this->socialMediaInstagramUrl; ?>" class="ig" target="_blank">instagram</a>
+								
+							</li>
+							<?php endif; ?>
+							
+							<?php if($this->socialMediaTwitterEnable) : ?>
+                            <li>
+								
+									<a href="<?php echo $this->socialMediaTwitterUrl; ?>" class="tw" target="_blank">twitter</a>
+								
+							</li>
+							<?php endif; ?>
+							
+								<?php if($this->socialMediaLinkedInEnable) : ?>
+                            <li>
+							
+									<a href="<?php echo $this->socialMediaLinkedInUrl; ?>" class="li" target="_blank">linkedin</a>
+								
+							</li>
+							<?php endif; ?>
+							
+							<?php if($this->socialMediaGooglePlusEnable) : ?>
+                            <li>
+								
+									<a href="<?php echo $this->socialMediaGooglePlusUrl; ?>" class="gp" target="_blank">google plus</a>
+								
+							</li>
+							<?php endif; ?>
+							
+							<?php if($this->socialMediaYouTubeEnable) : ?>
+                            <li>
+								
+									<a href="<?php echo $this->socialMediaYouTubeUrl; ?>" class="yt" target="_blank">youtube</a>
+								
+							</li>
+							
+							<?php endif; ?>
+                        </ul>
+						<?php endif; ?>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+	
+
+	
+	<div id="about" class="section section-negative section-skew-bottom" data-magellan-destination="about" data-type="background" data-speed="10">
+        <div class="row">
+            <div class="small-12 large-10 large-offset-1 columns text-center">
+                <?php include 'partials/mainheader.phtml'; ?>
+            </div>
+        </div>
+        <div class="row">
+            <?php include 'partials/basicinfo.phtml'; ?>
+        </div>
+        <div class="row" data-magellan-expedition data-options="destination_threshold: -30;">
+            <div class="small-12 columns text-center chevron-down" data-magellan-arrival="info">
+                <a href="#info" class="more">DALEJ</a>
+            </div>
+        </div>
+    </div>
+	
+	
+    <div id="info" class="section" data-magellan-destination="info" style="margin-bottom: 50px;">
+        <div class="row info-row">
+            <?php include 'partials/detailsdata.phtml'; ?>
+        </div>
+        <div class="row info-row">
+            <?php include 'partials/correspondencedata.phtml'; ?>
+        </div>
+    </div>
+	
+	
+	<footer>
+        <div class="row">
+            <div class="small-12 columns text-center">
+               
+            </div>
+        </div>
+    </footer>
+	
+	
+    <script src="<?php echo $this->resourceUrl('1038', '/js/jsmore/libs.min.js'); ?>"></script>
+	<script src="<?php echo $this->resourceUrl('1038', '/js/foundation.min.js'); ?>"></script>
+    <script src="<?php echo $this->resourceUrl('1038', '/js/custom.js'); ?>"></script>
+	<script>
+        $(document).foundation();
+    </script>
+	
+	

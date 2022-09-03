@@ -1,0 +1,30 @@
+<?php if($this->correspondenceDataEnable) : ?>
+     
+    <p class="headerSlider slide3"><span><?php echo $this->correspondenceDataSectionTitle; ?></span><span class="arrowSpan"></span></p>
+			
+		<div class="contentSlider">
+			<p class="header_column"><?php echo $this->businessCardTitle; ?></p>
+			
+			
+			
+			<?php if($this->correspondenceDataAddressEnable) : ?>
+                  
+			<p class="marginBottom"><span class="name1">Adres:</span> <?php echo $this->correspondenceDataAddressStreet; ?> <?php echo $this->correspondenceDataAddressLocalNumber; ?>   </p>
+				  
+			<p class="paddingLeft"><?php echo $this->correspondenceDataAddressZipCode; ?> <?php echo $this->correspondenceDataAddressCity; ?></p>
+                         
+            <?php endif; ?>
+
+            <?php if($this->correspondenceDataPhoneEnable) : ?>
+                         
+                 <p><span class="name3">Tel:</span> <?php echo $this->correspondenceDataPhoneValue; ?></p>
+                         
+            <?php endif; ?>
+			
+			
+		</div><!-- contentSlider -->
+
+<?php endif; ?>
+
+
+

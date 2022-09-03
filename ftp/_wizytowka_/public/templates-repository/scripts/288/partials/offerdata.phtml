@@ -1,0 +1,21 @@
+<?php if($this->offerEnable) : ?>
+
+<p class="links2 space">
+    <a href="#offer-szczegoly" title="" class="block4_FormOffer fancybox"><?php echo $this->offerSectionTitle; ?></a>
+</p>
+
+<div style="display: none;">
+    <div id="offer-szczegoly" class="row mfp-hide pop">
+		<div class="large-12 columns">
+            <div class="panel">
+                <div class="row" id="offer">
+					<h2><?php echo $this->offerSectionTitle; ?></h2>
+					<?php echo htmlspecialchars_decode($this->offerContent); ?>
+	            </div><!-- row -->
+			</div><!-- panel -->
+		</div><!-- large-12 columns -->
+    </div>
+</div>
+	
+	
+<?php endif; ?>

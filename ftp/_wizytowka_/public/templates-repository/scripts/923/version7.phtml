@@ -1,0 +1,150 @@
+﻿<div id="bg_wrapper"></div>
+
+	<div id="mobile-navigation" style="height: 60px;">
+		<div class="burger"></div>
+		<div class="menu-list">
+			<ul class="menuHeader">
+
+			  <li><a href="#section1" data-index="1" target="_self">Strona Główna</a></li>
+<li><a href="#section2" data-index="2" target="_self"><?php echo $this->basicInfoSectionTitle; ?></a></li>
+<li><a href="#section3" data-index="3" target="_self"><?php echo $this->detailsDataSectionTitle; ?></a></li>
+<li><a href="#section4" data-index="4" target="_self"><?php echo $this->offerSectionTitle; ?></a></li>
+<li><a href="#section6" data-index="6" target="_self"><?php echo $this->formSectionTitle; ?></a></li>
+             
+			
+              </ul>
+		</div>
+	</div><!-- mobile-navigation -->
+	<p style="position: fixed; left: 10%;margin: 20px 20px 20px 0; z-index: 50; top: 10px;"><button id="trigger-overlay" type="button"></button></p>
+	
+<!-- Begin -->
+<div class="main">
+	<!-- Section1 -->
+<div id="section1" class="section page1">
+	<div class="row">
+		<div class="large-12 medium-12 small-12 columns">
+			<div class="up_border"></div>
+				<div class="logo nagl"><h1><div class="title"><?php include 'partials/mainheader.phtml'; ?></div></h1></div>
+			<div class="down_border"></div>
+		</div>
+	</div>
+	 <div class="social ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-large">
+<?php if($this->socialMediaEnable) : ?>	
+		<ul>
+		
+			<?php if($this->socialMediaFacebookEnable) : ?>
+				<li class="social1">
+					<a href="<?php echo $this->socialMediaFacebookUrl; ?>"></a>	
+				</li>
+			<?php endif; ?>
+			
+			<?php if($this->socialMediaInstagramEnable) : ?>
+				<li class="social2">		
+					<a href="<?php echo $this->socialMediaInstagramUrl; ?>"></a>
+				</li>
+			<?php endif; ?>
+			
+			<?php if($this->socialMediaTwitterEnable) : ?>
+				<li class="social3">
+					<a href="<?php echo $this->socialMediaTwitterUrl; ?>"></a>
+				</li>
+			<?php endif; ?>
+			
+			<?php if($this->socialMediaLinkedInEnable) : ?>
+				<li class="social4">
+					<a href="<?php echo $this->socialMediaLinkedInUrl; ?>"></a>
+				</li>
+			<?php endif; ?>
+			
+			<?php if($this->socialMediaGooglePlusEnable) : ?>
+				<li class="social5">
+					<a href="<?php echo $this->socialMediaGooglePlusUrl; ?>"></a>
+				</li>
+			<?php endif; ?>
+			
+			<?php if($this->socialMediaYouTubeEnable) : ?>
+				<li class="social6">
+					<a href="<?php echo $this->socialMediaYouTubeUrl; ?>"></a>
+				</li>
+			<?php endif; ?>
+		</ul>
+	<?php endif; ?>
+	</div>
+</div> 
+<!-- Section1.End -->
+
+<!-- Section2 -->
+<div id="section2" class="section page1">
+	<div class="all_width">
+		<table><tr><td><img src="<?php echo $this->resourceUrl('923', '/images/linia1.png'); ?>"></td><td><p class="titleSection"><?php echo $this->basicInfoSectionTitle; ?></p></td><td><img src="<?php echo $this->resourceUrl('923', '/images/linia2.png'); ?>"></td></tr></table>
+	</div>
+	<div class="row">
+		<div class="large-12 medium-12 small-12 columns">
+			<p>
+				<?php include 'partials/basicinfo.phtml'; ?>
+			</p>
+		</div>	
+	</div>
+</div> 
+<!-- Section2.End -->
+
+<!-- Section3 -->
+<div id="section3" class="section page2">
+	<div class="all_width">
+		<table><tr><td><img src="<?php echo $this->resourceUrl('923', '/images/linia1.png'); ?>"></td><td><p class="titleSection"><?php echo $this->detailsDataSectionTitle; ?></p></td><td><img src="<?php echo $this->resourceUrl('923', '/images/linia2.png'); ?>"></td></tr></table>
+	</div>
+		<div class="row">
+<?php include 'partials/detailsdata.phtml'; ?>
+		</div>
+		
+		
+
+<?php include 'partials/correspondencedata.phtml'; ?>
+
+</div> 
+<!-- Section3.End -->
+
+<!-- Section4 -->
+<div id="section4" class="section page2">
+	<div class="all_width">
+		<table><tr><td><img src="<?php echo $this->resourceUrl('923', '/images/linia1.png'); ?>"></td><td><p class="titleSection"><?php echo $this->offerSectionTitle; ?></p></td><td><img src="<?php echo $this->resourceUrl('923', '/images/linia2.png'); ?>"></td></tr></table>
+		<div class="row">
+			<div class="large-12 medium-12 small-12 columns">
+				<?php include 'partials/offerdata.phtml'; ?>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Section4.End -->	
+	
+<!-- Section6 -->
+<div id="section6" class="section page4">
+	<div class="all_width">
+		<table><tr><td><img src="<?php echo $this->resourceUrl('923', '/images/linia1.png'); ?>"></td><td><p class="titleSection"><?php echo $this->formSectionTitle; ?></p></td><td><img src="<?php echo $this->resourceUrl('923', '/images/linia2.png'); ?>"></td></tr></table>
+		<?php include 'partials/form.phtml'; ?> 
+	</div>
+</div>
+<!-- Section6.End -->	
+	
+	
+	
+
+
+</div>
+<!-- End. -->
+
+
+ <div class="menuAll overlay overlay-contentscale">
+          <button type="button" class="overlay-close">Zamknij</button>
+          <nav>
+		  <div class="up_border"></div>
+              <ul>
+			  <li><a href="#section1" data-index="1">Strona Główna</a></li>
+<li><a href="#section2" data-index="2"><?php echo $this->basicInfoSectionTitle; ?></a></li>
+<li><a href="#section3" data-index="3"><?php echo $this->detailsDataSectionTitle; ?></a></li>
+<li><a href="#section4" data-index="4"><?php echo $this->offerSectionTitle; ?></a></li>
+<li><a href="#section6" data-index="6"><?php echo $this->formSectionTitle; ?></a></li>
+              </ul>
+			  <div class="down_border"></div>
+          </nav>
+      </div>

@@ -1,0 +1,109 @@
+<?php if($this->formEnable) : ?>
+ <!-- <p class="links2">
+    <a href="#formularz-do-korespondencji-szczegoly" title="" class="block4_Form"><?php echo $this->formSectionTitle; ?></a>
+</p>  -->
+
+    <div id="formularz-do-korespondencji-szczegoly" class="row mfp-hide paddingLeftNoneFormularz">
+
+        <?php if ($this->showSuccessConfirmation) : /* SUCCESS MESSAGE */ ?>
+
+            <h2>Dziękujemy za przesłanie wiadomości!</h2>
+
+				<script>
+                    $(document).ready(function() {
+					
+						$('#about').hide();
+						$('#lokalizacja').hide();
+						$('#daneKorespondencyjne').hide();
+						$('#daneFirmowe').hide();
+						$('#form').show();
+						
+						$('nav ul li').removeClass("activeNav");
+						$('nav ul li.form').addClass("activeNav");
+						
+						
+                    });
+                </script>
+				
+				
+        <?php endif ?>
+
+        <?php if ($this->showContactForm) : /* SUCCESS CONTACT FORM */ ?>
+
+            <?php if($this->contactFormErrors) : /* SHOW FORM LAYER WHEN HAS ERRORS */ ?>
+                
+				<script>
+                    $(document).ready(function() {
+						
+						$('#about').hide();
+						$('#lokalizacja').hide();
+						$('#daneKorespondencyjne').hide();
+						$('#daneFirmowe').hide();
+						$('#form').show();
+						
+						$('nav ul li').removeClass("activeNav");
+						$('nav ul li.form').addClass("activeNav");
+						
+                    });
+                </script>
+				
+            <?php endif; ?>
+
+			<hr class="lineHeader" />
+			<p class="header_column"><?php echo $this->formSectionTitle; ?></p>
+			<hr class="lineHeaderSmall" />
+
+            <form action="<?php echo $this->contactForm->getAction()?>" method="<?php echo $this->contactForm->getMethod();?>">
+
+                <div class="large-6 medium-6 columns paddingLeftNone">
+                    <?php echo $this->contactForm->email->renderViewHelper();?>
+                    <?php echo $this->contactForm->email->renderErrors()?>
+                </div><!-- large-6 medium-6 columns -->
+
+                <div class="large-6 medium-6 columns paddingLeftNoneSecond">
+                    <?php echo $this->contactForm->phone->renderViewHelper();?>
+                    <?php echo $this->contactForm->phone->renderErrors()?>
+                </div><!-- large-6 medium-6 columns -->
+
+                <div class="large-12 columns paddingLeftNone">
+                    <?php echo $this->contactForm->subject->renderViewHelper();?>
+                    <?php echo $this->contactForm->subject->renderErrors()?>
+                </div><!-- large-12 columns -->
+
+                <div class="large-12 columns paddingLeftNone">
+                    <?php echo $this->contactForm->message->renderViewHelper();?>
+                    <?php echo $this->contactForm->message->renderErrors()?>
+                </div><!-- large-12 columns -->
+                <?php if($this->contactForm->has('rodoRegulations')): ?>
+                <div class="large-12 columns paddingLeftNone">
+                        <div class="offerContent">
+                            <?php echo $this->contactForm->rodoRegulations->renderViewHelper(); ?>
+                            <?php echo $this->contactForm->rodoRegulations->renderErrors() ?>
+                        </div>
+                </div><!-- large-12 columns -->
+                    <?php endif; ?>
+
+				<div class="pnlSend">
+					<div class="large-12 medium-12 columns">
+						<div class="pull-left">
+							<div id="captchaContainer" class="left">
+								<?php echo $this->contactForm->captcha->render()?>
+							</div>
+						</div>
+
+						<div class="right">
+							<?php echo $this->contactForm->send->renderViewHelper();?>
+						</div>
+					</div><!-- large-12 medium-12 columns -->
+				</div> <!-- pnlSend -->
+
+            </form>
+
+        <?php endif; ?>
+
+
+    </div>
+
+
+<?php endif; ?>
+

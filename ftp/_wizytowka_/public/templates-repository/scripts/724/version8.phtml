@@ -1,0 +1,40 @@
+<header>
+	<?php include 'partials/mainheader.phtml'; ?>
+	<div class="decor-line"></div>
+	<div id="burger">
+		<div class="part"></div>
+		<div class="part"></div>
+		<div class="part"></div>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="#about"><?php echo $this->basicInfoSectionTitle; ?></a></li>
+			<li><a href="#offer"><?php echo $this->offerSectionTitle; ?></a></li>
+			<li><a href="#address"><?php echo $this->detailsDataSectionTitle; ?></a></li>
+			<li><a href="#maps" class="mapInvoker"><?php echo $this->mapSectionTitle; ?></a></li>
+
+		</ul>
+	</div>
+</header>
+
+	<section id="about" class="content-row">
+		<?php include 'partials/basicinfo.phtml'; ?>
+	</section><!-- about -->
+	
+	<section id="offer" class="content-row">
+		<?php include 'partials/offerdata.phtml'; ?>
+	</section><!-- about -->
+	
+	<section id="address" class="content-row">
+		<?php include 'partials/detailsdata.phtml'; ?>
+		<div class="space"></div>
+		<?php include 'partials/correspondencedata.phtml'; ?>
+	</section><!-- address -->
+
+	<section id="maps" class="content-row">
+		<?php include 'partials/map.phtml'; ?>
+	</section>
+	
+	
+
+

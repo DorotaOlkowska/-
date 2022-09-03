@@ -1,0 +1,42 @@
+<?php if($this->correspondenceDataEnable) : ?>
+
+
+	<div class="all_width">
+		<table><tr><td><img src="<?php echo $this->resourceUrl('923', '/images/linia1.png'); ?>"></td><td><p class="titleSection"><?php echo $this->correspondenceDataSectionTitle; ?></p></td><td><img src="<?php echo $this->resourceUrl('923', '/images/linia2.png'); ?>"></td></tr></table>
+	</div>	
+		<div class="row">
+
+
+
+
+	
+			
+		<?php if($this->correspondenceDataAddressEnable) : ?>
+	<div class="large-6 medium-12 small-12 columns">
+	<h2>Adres:</h2> 
+			<p><?php echo $this->businessCardTitle; ?></p>
+			<p><span class="name1">Adres:</span> <?php echo $this->correspondenceDataAddressStreet; ?> <?php echo $this->correspondenceDataAddressLocalNumber; ?>
+            </p>
+                         
+             <p>
+               <?php echo $this->correspondenceDataAddressZipCode; ?> <?php echo $this->correspondenceDataAddressCity; ?>
+            </p>              
+</div>	
+ <?php endif; ?>
+
+				
+       
+
+        <?php if($this->correspondenceDataPhoneEnable) : ?>
+		<div class="large-6 medium-12 small-12 columns">
+                 <h2>Telefon:</h2>         
+             <p><span class="name3">Telefon:</span> <?php echo $this->correspondenceDataPhoneValue; ?></p>
+                         
+      
+  </div>        
+    <?php endif; ?>
+		
+
+	</div>
+<?php endif; ?>
+

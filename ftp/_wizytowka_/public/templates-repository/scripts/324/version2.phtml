@@ -1,0 +1,64 @@
+<div id="mobile-navigation">
+	<div class="burger">
+		<div class="part"></div>
+		<div class="part"></div>
+		<div class="part"></div>
+	</div>
+	<div class="menu-list">
+		<ul>
+			<li><a href="#about-us" class="link-to-page active-page"><?php echo $this->basicInfoSectionTitle; ?></a></li>
+			<li><a href="#adress" class="link-to-page"><?php echo $this->detailsDataSectionTitle; ?></a></li>
+			<li><a href="#maps" class="link-to-page mapInvoker"><?php echo $this->mapSectionTitle; ?></a></li>
+		</ul>
+	</div>
+</div>
+<div class="row">
+    <div class="large-3 medium-3 columns navigation navblock">
+        <nav>
+            <ul>
+                <li><a href="#about-us" class="link-to-page active-page"><?php echo $this->basicInfoSectionTitle; ?></a></li>
+                <li><a href="#adress" class="link-to-page"><?php echo $this->detailsDataSectionTitle; ?></a></li>
+				<li><a href="#maps" class="link-to-page mapInvoker"><?php echo $this->mapSectionTitle; ?></a></li>
+            </ul>
+        </nav>
+    </div><!-- large-3 medium-3 columns -->
+
+
+	<div class="large-9 medium-9 columns content">
+	
+		<?php include 'partials/mainheader.phtml'; ?>
+		<hr class="blackLine_default">
+
+
+        <div id="about-us" class="section-content visible">
+			<?php include 'partials/basicinfo.phtml'; ?>
+		</div><!-- #about-us -->
+		
+		
+		<div id="adress" class="section-content">
+			<div class="large-6 medium-6 columns paddingLeft_Cancel mobile_no_padding">
+				<?php include 'partials/detailsdata.phtml'; ?>
+			</div><!-- large-6 medium-6 columns paddingLeft_Cancel mobile_no_padding -->
+		
+			<div class="large-6 medium-6 columns mobile_no_padding">
+				<?php include 'partials/correspondencedata.phtml'; ?>
+			</div><!-- large-6 medium-6 columns -->
+		</div><!-- # adress -->
+		
+		<div id="maps" class="section-content">
+			<?php include 'partials/map.phtml'; ?>
+		</div><!-- #maps -->
+
+		
+	</div><!-- large-9 medium-9 columns -->
+	
+</div><!-- row -->
+
+
+
+
+
+	
+	
+	
+	

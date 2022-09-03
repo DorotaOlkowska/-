@@ -1,0 +1,93 @@
+<?php if($this->formEnable) : ?>
+    <div class="padding-class">
+
+
+        <?php if($this->showSuccessConfirmation) : /* SUCCESS MESSAGE */ ?>
+
+            <h2>Dziękujemy za przesłanie wiadomości!</h2>
+
+            <script>
+                $(document).ready(function () {
+                    var offsetScroll = -50; //Offset of 20px
+                    $("html, body").animate({
+                        scrollTop: $('#formularz').offset().top + offsetScroll
+                    }, 1);
+                });
+            </script>
+
+
+        <?php endif ?>
+
+        <?php if($this->showContactForm) : /* SUCCESS CONTACT FORM */ ?>
+
+            <?php if($this->contactFormErrors) : /* SHOW FORM LAYER WHEN HAS ERRORS */ ?>
+
+            <script>
+                $(document).ready(function () {
+                    var offsetScroll = -50; //Offset of 20px
+                    $("html, body").animate({
+                        scrollTop: $('#formularz').offset().top + offsetScroll
+                    }, 1);
+                });
+            </script>
+
+        <?php endif; ?>
+
+            <div id="formularz">
+                <!-- formularz -->
+                <div class="blockContent contFormula">
+
+
+                    <form action="<?php echo $this->contactForm->getAction()?>" method="<?php echo $this->contactForm->getMethod();?>"
+                          class="form">
+
+                        <div class="large-6 medium-6 small-12 columns">
+                            <?php echo $this->contactForm->email->renderErrors() ?>
+                            <?php echo $this->contactForm->email->renderViewHelper(); ?>
+                        </div>
+
+                        <div class="large-6 medium-6 small-12 columns">
+                            <?php echo $this->contactForm->phone->renderErrors() ?>
+                            <?php echo $this->contactForm->phone->renderViewHelper(); ?>
+                        </div>
+
+                        <div class="large-12 medium-12 small-12 columns">
+                            <?php echo $this->contactForm->subject->renderErrors() ?>
+                            <?php echo $this->contactForm->subject->renderViewHelper(); ?>
+                        </div>
+
+                        <div class="medium-12 large-12 small-12 columns last-box">
+                            <?php echo $this->contactForm->message->renderErrors() ?>
+                            <?php echo $this->contactForm->message->renderViewHelper(); ?>
+                        </div>
+                        <?php if($this->contactForm->has('rodoRegulations')): ?>
+                            <div class="medium-12 large-12 small-12 columns last-box">
+                                <div class="rodoRegulations">
+                                    <?php echo $this->contactForm->rodoRegulations->renderViewHelper(); ?>
+                                    <?php echo $this->contactForm->rodoRegulations->renderErrors() ?>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                        <div class="large-8 medium-12 columns">&nbsp;</div>
+                        <div class="pnlSend">
+                            <div class="large-8 medium-12 columns">
+                                <div class="pull-left">
+                                    <div id="captchaContainer">
+                                        <?php echo $this->contactForm->captcha->render() ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="large-4 medium-12 small-12 columns" style="padding-left: 0;">
+                                <div class="right">
+                                    <?php echo $this->contactForm->send->renderViewHelper(); ?>
+                                </div>
+                            </div>
+                        </div> <!-- pnlSend -->
+                    </form>
+                </div><!-- blockContent -->
+            </div><!-- formularz -->
+        <?php endif; ?>
+    </div>
+<?php endif; ?>
+
+

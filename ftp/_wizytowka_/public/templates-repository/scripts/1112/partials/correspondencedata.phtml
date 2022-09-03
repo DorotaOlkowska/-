@@ -1,0 +1,16 @@
+<?php if($this->correspondenceDataEnable) : ?>
+    <h2><?php echo $this->correspondenceDataSectionTitle; ?></h2>
+            <?php if($this->correspondenceDataAddressEnable) : ?>
+                <strong>Adres:</strong><br>
+                    <?php echo $this->businessCardTitle; ?><br>
+                    <?php echo $this->correspondenceDataAddressStreet; ?> <?php echo $this->correspondenceDataAddressLocalNumber; ?><br>
+                    <?php echo $this->correspondenceDataAddressZipCode; ?> <?php echo $this->correspondenceDataAddressCity; ?></p>
+			<?php endif; ?>
+			
+				<?php if($this->correspondenceDataPhoneEnable) : ?>
+						<strong>Tel.:</strong> <?php echo $this->correspondenceDataPhoneValue; ?></p>
+				<?php endif; ?>
+<?php endif; ?>
+
+
+
