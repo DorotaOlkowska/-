@@ -1,3 +1,0 @@
-[2021-11-21-14-50-49] 10.252.6.81 INFO: GET Invoking matched Route /api/businesscard \App\Controller\BusinessCardController:indexAction   
-[2021-11-21-15-15-55] 10.252.6.81 INFO: GET Invoking matched Route /api/businesscard \App\Controller\BusinessCardController:indexAction   
-[2021-11-21-15-17-51] 10.252.6.81 INFO: GET Invoking matched Route /api/businesscard \App\Controller\BusinessCardController:indexAction   

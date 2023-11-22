@@ -1,6 +1,0 @@
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !\.(css|gif|ico|jpg|js|png|swf|txt|svg|woff|ttf|eot|map)$
-RewriteCond %{REQUEST_FILENAME} !(index_preview.php)
-RewriteRule . index.php [L]

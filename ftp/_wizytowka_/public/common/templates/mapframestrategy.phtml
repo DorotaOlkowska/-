@@ -1,9 +1,0 @@
-<?php if($this->user) : ?>
-    <?php if($this->mapApiKeyEnable) : ?>
-        <iframe src="<?php echo $this->baseUrl('map'); ?>" id="mapFrame"></iframe>
-    <?php else: ?>
-        <iframe src="<?php echo $this->serverTechnicalUrl('map'); ?>" id="mapFrame"></iframe>
-    <?php endif; ?>
-<?php else: ?>
-    <iframe src="<?php echo $this->baseUrl('map'); ?>" id="mapFrame"></iframe>
-<?php endif; ?>
